@@ -1,7 +1,7 @@
 const handler = async (event) => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: 'Hello from the API!' }),
+    body: JSON.stringify({ message: 'Hello World!' }),
   };
 };
 

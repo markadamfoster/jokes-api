@@ -124,11 +124,11 @@ exports.handler = async event => {
     return allJokes[num]
   })
 
+  const responseData = {jokes}
+
   return {
       statusCode: 200,
-      body: {
-        jokes
-      },
+      body: JSON.stringify(responseData),
   }
 }
 

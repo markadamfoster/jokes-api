@@ -1,8 +1,9 @@
-const handler = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: 'Hello World!' }),
-  };
-};
+import { Config, Context } from "@netlify/functions";
 
-module.exports = { handler };
+export default async (req, context) => {
+  return new Response(`Hello World!`)
+}
+
+export const config = {
+  path: "/jokes"
+}

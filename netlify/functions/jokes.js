@@ -1,12 +1,3 @@
-// hello there!
-// 
-// I'm a serverless function that you can deploy as part of your site.
-// I'll get deployed to AWS Lambda, but you don't need to know that. 
-// You can develop and deploy serverless functions right here as part
-// of your site. Netlify Functions will handle the rest for you.
-
-
-
 exports.handler = async event => {
   const allJokes = [
     {"id": 1, "type": "general", "setup": "Did you hear about the restaurant on the moon?", "punchline": "Great food, no atmosphere."},
@@ -124,11 +115,9 @@ exports.handler = async event => {
     return allJokes[num]
   })
 
-  const responseData = {jokes}
-
   return {
       statusCode: 200,
-      body: JSON.stringify(responseData),
+      body: JSON.stringify(jokes),
   }
 }
 
